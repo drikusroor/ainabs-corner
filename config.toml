@@ -1,0 +1,4 @@
+baseURL = 'https://ainab.site/hugo'
+languageCode = 'en-us'
+title = "Ainab's Corner"
+theme = 'ananke'
