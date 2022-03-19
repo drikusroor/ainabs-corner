@@ -52,14 +52,18 @@ Until I find a better solution, for now it might be better just to enqueue a sep
 
 ### **index.php** (the main plugin file):
 
+```php
 function my\_blocks\_popover\_enqueue\_script()
 {   
     wp\_enqueue\_script( 'my\_blocks\_popover\_script', plugin\_dir\_url( \_\_FILE\_\_ ) . 'popover/scripts/index.js' );
 }
 add\_action('wp\_enqueue\_scripts', 'my\_blocks\_popover\_enqueue\_script');
 
+```
+
 ### **index.js** (the enqueued script):
 
+```js
 document.addEventListener("DOMContentLoaded", function () {
     document
         .querySelectorAll(".my-blocks-popover\_\_trigger")
@@ -76,8 +80,11 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 });
 
+```
+
 ### **save.js** (the custom block's save function):
 
+```js
 export default function save() {
 
     return (
@@ -87,3 +94,5 @@ export default function save() {
         </div>
     )
 }
+
+```

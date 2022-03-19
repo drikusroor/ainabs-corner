@@ -11,6 +11,7 @@ tags:
 
 In my [previous post](https://ainab.site/2021/12/01/fix-a-sql-database-before-exporting-to-a-dac-bacpac-file/) I showed how you can convert a `.bak` file to a `DAC` file and how to fix any errors that may appear. For the same job, I had to add some new SQL logins and users after the migration of the database. This post serves as a notebook for how to do that.
 
+```sql
 \-- Execute this query in the "master" database
 
 -- Create new login
@@ -57,5 +58,6 @@ LEFT OUTER JOIN sys.database\_principals AS DP2
     ON DRM.member\_principal\_id = DP2.principal\_id  
 WHERE DP1.type = 'R'
 AND DP2.name IS NOT NULL
+```
 
 Now, we have created some logins and users. But to validate the logins and its connection strings, I'd suggest you take a look at [this dotnet console application that tests connection strings.](https://ainab.site/2021/12/09/test-multiple-sql-server-connection-strings-in-a-dotnet-console-app/)

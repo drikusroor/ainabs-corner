@@ -62,6 +62,7 @@ One or more unsupported elements were found in the schema used as part of a data
 
 Luckily, a quick Google search found me this [script on Stackoverflow](https://stackoverflow.com/a/45005153/4496102) which resolves this orphaned logins error.
 
+```sql
 SET NOCOUNT ON
 USE \[db\_name\]
 GO
@@ -108,11 +109,13 @@ BEGIN
   END
 END
 SET NOCOUNT OFF
+```
 
 ### 4\. Result
 
 When we combine all these fixes, we end up with the following SQL script:
 
+```sql
 USE \[db\_name\]
 
 --DROP SCHEMAS ON WHICH THE WINDOWS USERS ARE DEPENDENT
@@ -175,3 +178,4 @@ BEGIN
   END
 END
 SET NOCOUNT OFF
+```
