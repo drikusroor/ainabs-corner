@@ -1,7 +1,7 @@
 <!-- layouts/_default/_markup/render-image.html -->
 
 <img
-  src="{{ .Destination | safeURL }}"
+  src="{{ .Destination | safeURL | relURL }}"
   alt="{{ .Text }}"
   loading="lazy"
 />

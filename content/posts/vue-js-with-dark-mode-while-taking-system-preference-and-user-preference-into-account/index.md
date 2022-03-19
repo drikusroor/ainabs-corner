@@ -6,7 +6,7 @@ categories:
 tags: 
   - "dark-mode"
   - "vue-js"
-coverImage: "afbeelding.png"
+featured_image: 'images/afbeelding.png'
 ---
 
 **tl;dr - A vue.js example of adding dark mode support to your website that takes system preference and user preference into account. See [link](https://github.com/drikusroor/vuejs-dark-mode) for source.**
