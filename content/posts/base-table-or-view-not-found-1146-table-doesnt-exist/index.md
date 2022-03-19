@@ -7,7 +7,7 @@ tags:
   - "doctrine"
   - "filament"
   - "laravel"
-coverImage: "Screenshot-2021-05-25-134026.png"
+featured_image: "images/Screenshot-2021-05-25-134026.png"
 ---
 
 When trying to use a Filament resource while also using Doctrine as an ORM, one might encounter the following error:

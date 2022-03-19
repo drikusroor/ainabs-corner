@@ -6,7 +6,7 @@ categories:
 tags: 
   - "child-theme"
   - "wordpress"
-coverImage: "afbeelding-17.png"
+featured_image: "images/afbeelding-17.png"
 ---
 
 I am currently working on dark mode support for a Wordpress theme. For that, the website will need to use different colors depending on the preference of the user. At the same time, I want those colors to be easily customizable through Wordpress' Customizer.

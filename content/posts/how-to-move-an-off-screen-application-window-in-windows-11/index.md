@@ -7,7 +7,7 @@ categories:
   - "tips-tricks"
 tags: 
   - "windows"
-coverImage: "image.png"
+featured_image: "images/image.png"
 ---
 
 As I frequently disconnect and connect monitors from and to my laptop, a bug(?) in Windows 11 causes the windows of application to disappear sometimes. This usually happens with `[Zettlr](https://www.zettlr.com/)`, my note-taking app of choice. This frustrated me endlessly, as I want my notes to be easily accessible. But now I think I found a solution to make the window appear again.

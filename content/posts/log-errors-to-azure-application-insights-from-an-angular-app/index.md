@@ -8,7 +8,7 @@ tags:
   - "application-insights"
   - "azure"
   - "logging"
-coverImage: "afbeelding-13.png"
+featured_image: "images/afbeelding-13.png"
 ---
 
 As there is no software without bugs, we must always assume there are bugs in our software. Subsequently, it would be very nice if we would be aware of those bugs as well. We cannot always be aware of all the bugs in our software, but we can be aware of all exceptions that occur in our software, using logging and telemetrics services.

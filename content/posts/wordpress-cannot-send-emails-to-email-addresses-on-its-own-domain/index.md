@@ -8,7 +8,7 @@ tags:
   - "php"
   - "plesk"
   - "wordpress"
-coverImage: "afbeelding-20.png"
+featured_image: "images/afbeelding-20.png"
 ---
 
 Imagine the following situation: You have a Wordpress website hosted on example.com. The host has a Plesk configuration panel. Your email is handled by Google Workspace. MX records have been configured for this in Plesk, as described [here](https://support.google.com/a/answer/9174449?hl=en&ref_topic=4446024). The website has a contact form that should send an email to you, the owner of the website, on info@example.com.

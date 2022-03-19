@@ -7,7 +7,7 @@ tags:
   - "angular"
   - "css"
   - "skeleton"
-coverImage: "afbeelding-1.png"
+featured_image: "images/afbeelding-1.png"
 ---
 
 So I was working on creating a nice extendable [skeleton](https://css-tricks.com/building-skeleton-screens-css-custom-properties/) component when I stumbled upon a problem: I wanted to create a base skeleton style for the component that could be extended outside the component using utility classes. Something like this:

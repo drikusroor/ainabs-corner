@@ -6,7 +6,7 @@ categories:
 tags: 
   - "file-permissions"
   - "joomla"
-coverImage: "afbeelding.png"
+featured_image: "images/afbeelding.png"
 ---
 
 Today, I tried to install an extension to a Joomla website I am currently working on. However, I got an error message, saying:

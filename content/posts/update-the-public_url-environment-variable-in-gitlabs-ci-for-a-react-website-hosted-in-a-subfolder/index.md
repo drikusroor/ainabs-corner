@@ -6,7 +6,7 @@ categories:
 tags: 
   - "gitlab"
   - "react"
-coverImage: "image-6.png"
+featured_image: "images/image-6.png"
 ---
 
 When hosting a React website in a subfolder, you want the paths to the images and fonts to be updated as well. When the path of an image in your development environment is `/images/background.jpg` and your website is hosted at `https://example.com/app`, you want the path to be updated to `/app/images/background.jpg` in the production build.

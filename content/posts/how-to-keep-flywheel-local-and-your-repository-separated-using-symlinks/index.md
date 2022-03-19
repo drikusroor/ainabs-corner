@@ -7,7 +7,7 @@ tags:
   - "flywheel-local-2"
   - "symlinks"
   - "wordpress"
-coverImage: "image-9.png"
+featured_image: "images/image-9.png"
 ---
 
 Since a while, I have been using Flywheel's Local for my local WordPress development server and it has been. No time spend on configuration Docker, Apache, database connections, et cetera.

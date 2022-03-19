@@ -6,7 +6,7 @@ categories:
 tags: 
   - "github"
   - "upptime"
-coverImage: "Screenshot-2021-09-22-232046.png"
+featured_image: "images/Screenshot-2021-09-22-232046.png"
 ---
 
 [Upptime](https://upptime.js.org/) is a very neat tool that allows you to track the status of your websites and creates Github issues whenever a site has downtime. The extra neat aspect of Upptime is that it works entirely on Github. No hosting or cloud provider is necessary whatsoever, it all runs using Github Actions and Github Pages.

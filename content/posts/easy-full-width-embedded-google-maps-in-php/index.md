@@ -6,7 +6,7 @@ categories:
 tags: 
   - "google-maps"
   - "php"
-coverImage: "Screenshot-2021-10-29-at-21.06.10-e1635534472580.png"
+featured_image: "images/Screenshot-2021-10-29-at-21.06.10-e1635534472580.png"
 ---
 
 Just an [easy full-width embedded Google Maps snippet](https://gist.github.com/drikusroor/a973906c25e6b4dfa35523af259993a1) for my own reference:

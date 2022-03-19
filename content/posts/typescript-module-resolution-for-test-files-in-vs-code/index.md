@@ -6,7 +6,7 @@ categories:
 tags: 
   - "typescript"
   - "vs-code"
-coverImage: "image-1.png"
+featured_image: "images/image-1.png"
 ---
 
 In a Typescript project I am working on, I use tsconfig's `paths` property to create local modules that I can refer to in the project's import without having to type a long relative directory.

@@ -7,7 +7,7 @@ tags:
   - "azure"
   - "blob-storage"
   - "sourcemaps"
-coverImage: "remove-old-blobs.png"
+featured_image: "images/remove-old-blobs.png"
 ---
 
 I host my Angular websites using Azure and I use Application Insights to find and report errors. Normally, the exception gets logged, but Angular builds usually have minified javascript, making it hard to debug the origin of an error.

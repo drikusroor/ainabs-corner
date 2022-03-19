@@ -9,7 +9,7 @@ tags:
   - "azure"
   - "pm2"
   - "static"
-coverImage: "afbeelding-16.png"
+featured_image: "images/afbeelding-16.png"
 ---
 
 Building an Angular app usually results in a bunch of files, mainly consisting of Javascript files, CSS files, and an `index.html`.

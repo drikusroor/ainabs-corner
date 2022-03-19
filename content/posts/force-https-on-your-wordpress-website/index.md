@@ -7,7 +7,7 @@ tags:
   - "apache"
   - "https"
   - "wordpress"
-coverImage: "Screenshot-2021-09-21-105033.png"
+featured_image: "images/Screenshot-2021-09-21-105033.png"
 ---
 
 You have finally installed that SSL certificate to your website and now the website keeps hanging in an unsafe http connection. What is up with that?

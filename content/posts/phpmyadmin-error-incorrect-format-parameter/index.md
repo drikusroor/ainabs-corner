@@ -7,7 +7,7 @@ tags:
   - "docker"
   - "php"
   - "phpmyadmin"
-coverImage: "afbeelding.png"
+featured_image: "images/afbeelding.png"
 ---
 
 If you are ever trying to import a (large) existing database through phpMyAdmin and you are getting the following error, you might want to check your `php.ini` file.

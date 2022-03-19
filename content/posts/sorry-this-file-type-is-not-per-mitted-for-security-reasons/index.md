@@ -6,7 +6,7 @@ categories:
 tags: 
   - "webp"
   - "wordpress"
-coverImage: "afbeelding-4.png"
+featured_image: "images/afbeelding-4.png"
 ---
 
 Today, I wanted to upload a [WebP](https://en.wikipedia.org/wiki/WebP) image to a Wordpress website, because we all know WebP is the [superior image format](https://developers.google.com/speed/webp/faq) nowadays.

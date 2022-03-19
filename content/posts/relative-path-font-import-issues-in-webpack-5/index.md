@@ -5,7 +5,7 @@ categories:
   - "problems-solutions"
 tags: 
   - "webpack"
-coverImage: "Screenshot-2021-05-25-223648.jpg"
+featured_image: "images/Screenshot-2021-05-25-223648.jpg"
 ---
 
 _This is mainly a note to myself that I can use as a reference when a future me is making the same mistake again._

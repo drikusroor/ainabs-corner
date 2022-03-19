@@ -7,7 +7,7 @@ tags:
   - "child-theme"
   - "php"
   - "wordpress"
-coverImage: "image-7.png"
+featured_image: "images/image-7.png"
 ---
 
 As you can extend your Wordpress theme by adding actions to the theme's `functions.php`, it is safe to say that it is very easy to bloat this file with hundreds of lines of code.
