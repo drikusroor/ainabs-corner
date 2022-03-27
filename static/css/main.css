@@ -1,3 +1,14 @@
+@font-face {
+  font-family: "MagicCards";
+  src: url(../fonts/MagicCardsNormal.ttf);
+}
+
+.magic-cards {
+  font-family: "MagicCards";
+  color: #d8b65f;
+  word-spacing: 0.25em;
+}
+
 .inline-svg {
   display: inline-block;
   vertical-align: middle;
