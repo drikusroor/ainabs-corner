@@ -1,7 +1,17 @@
 <!-- layouts/_default/_markup/render-image.html -->
+{{- $img := .Page.Resources.GetMatch .Destination -}}
+{{- if and (not $img) .Page.File -}}
+{{ $path := path.Join .Page.File.Dir .Destination }}
+{{- $img = resources.Get $path -}}
+{{- end -}}
+{{- with $img -}}
 
 <img
-  src="{{ .Destination | safeURL }}"
-  alt="{{ .Text }}"
+  alt="{{ $.Text }}"
+  src="{{ $.Destination | safeURL }}"
+  width={{ $img.Width }}
+  height={{ $img.Height }}
   loading="lazy"
 />
+
+{{- end -}}
