@@ -1,3 +1,5 @@
 languageCode = 'en-us'
 title = "Ainab's Corner"
 theme = 'ananke'
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
