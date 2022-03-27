@@ -1,5 +1,5 @@
 languageCode = 'en-us'
-title = "Ainab's Corner"
+title = "Ainab's Journal"
 theme = 'ananke'
 [outputs]
   home = ["HTML", "RSS", "JSON"]
