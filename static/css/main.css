@@ -1,0 +1,12 @@
+.inline-svg {
+  display: inline-block;
+  vertical-align: middle;
+
+}
+
+.inline-svg svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+  display: inline-block;
+}

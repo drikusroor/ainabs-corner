@@ -3,3 +3,5 @@ title = "Ainab's Corner"
 theme = 'ananke'
 [outputs]
   home = ["HTML", "RSS", "JSON"]
+[Params]
+  custom_css = ["css/main.css"]
