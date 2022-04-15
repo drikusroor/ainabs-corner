@@ -1,0 +1,45 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main  # Set a branch to deploy
+  pull_request:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-20.04
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: true  # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.91.2'
+          # extended: true
+
+      - name: Build
+        run: hugo --minify
+
+      - name: ftp-action
+        # You may pin to the exact commit or the version.
+        # uses: sebastianpopp/ftp-action@eb75c5cb29d23ee4a729720a27dfb66403cb0f6d
+        uses: sebastianpopp/ftp-action@v2.0.0
+        with:
+          # FTP host
+          host: ${{ secrets.FtpHost }}
+          # FTP user
+          user: ${{ secrets.FtpUser }}
+          # FTP password
+          password: ${{ secrets.FtpPassword }}
+          # Force SSL encryption
+          forceSsl: true
+          # Local directory
+          localDir: public
+          # Remote directory
+          remoteDir: ${{ secrets.RemoteDir }}
