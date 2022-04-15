@@ -1,0 +1,29 @@
+# Ainab's corner
+
+Ainab's blog, made possible using Hugo static site generator.
+
+## How to use
+
+First, install [Hugo](https://gohugo.io/)
+
+#### Clone this repo
+
+```sh
+git@github.com:drikusroor/ainabs-corner.git
+```
+
+#### Get git submodule
+
+```sh
+git submodule update --init
+```
+
+#### Build website
+
+```sh
+./build.sh
+# or
+hugo --config config.toml,config.production.toml -D
+```
+
+#### Develop website
