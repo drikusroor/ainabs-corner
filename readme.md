@@ -27,3 +27,11 @@ hugo --config config.toml,config.production.toml -D
 ```
 
 #### Develop website
+
+```sh
+# watch mode
+hugo server -D -w
+
+# poll mode (every 1s)
+hugo server -D --poll 1000
+```
