@@ -42,4 +42,4 @@ jobs:
           # Local directory
           localDir: public
           # Remote directory
-          remoteDir: ${{ secrets.RemoteDir }}
+          remoteDir: ${{ secrets.FtpRemoteDir }}
