@@ -1,4 +1,4 @@
-# Ainab's corner
+# Ainab's corner &middot; [![CI](https://github.com/drikusroor/ainabs-corner/actions/workflows/main.yml/badge.svg)](https://github.com/drikusroor/ainabs-corner/actions/workflows/main.yml)
 
 Ainab's blog, made possible using Hugo static site generator.
 
