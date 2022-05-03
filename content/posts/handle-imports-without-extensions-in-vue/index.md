@@ -18,7 +18,7 @@ import CrazyComponent from '@/components/CrazyComponent';
 import CrazyComponent from '@/components/CrazyComponent.vue';
 ```
 
-There are some things you have to
+There are some things you have to configure. I will outline these things below:
 
 ## Rollup
 
