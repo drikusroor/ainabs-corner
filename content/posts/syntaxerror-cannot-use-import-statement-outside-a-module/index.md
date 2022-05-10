@@ -4,7 +4,7 @@ date: "2021-08-02"
 categories: 
   - "problems-solutions"
 tags: 
-  - "node"
+  - "node-js"
   - "npm"
   - "typeorm"
   - "typescript"
