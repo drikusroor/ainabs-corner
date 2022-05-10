@@ -1,4 +1,4 @@
-# Ainab's journal &middot; [![CI](https://github.com/drikusroor/ainabs-corner/actions/workflows/main.yml/badge.svg)](https://github.com/drikusroor/ainabs-corner/actions/workflows/main.yml)
+# Ainab's journal &middot; [![CI](https://github.com/drikusroor/ainabs-journal/actions/workflows/main.yml/badge.svg)](https://github.com/drikusroor/ainabs-journal/actions/workflows/main.yml)
 
 Ainab's blog, made possible using Hugo static site generator.
 
@@ -11,7 +11,7 @@ First, install [Hugo](https://gohugo.io/)
 #### Clone this repo
 
 ```sh
-git@github.com:drikusroor/ainabs-corner.git
+git@github.com:drikusroor/ainabs-journal.git
 ```
 
 #### Get git submodule
