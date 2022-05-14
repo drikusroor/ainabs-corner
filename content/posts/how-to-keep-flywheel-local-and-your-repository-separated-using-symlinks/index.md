@@ -74,7 +74,7 @@ On macOS or linux, creating a symlink is slightly different:
 
 ```shell
 \# macOs / linux
-ln -s /Users/JaneDoe/repositories/custom-theme "/Users/JaneDoe/Local Sites/jane-doe-website/app/public/wp-content/plugins"
+ln -s /Users/JaneDoe/repositories/custom-theme "/Users/JaneDoe/Local Sites/jane-doe-website/app/public/wp-content/themes"
 ```
 
 When we now navigate to Wordpress, assuming you have a working plugin, we should now see our custom plugin:
