@@ -22,3 +22,7 @@
   fill: currentColor;
   display: inline-block;
 }
+
+img {
+  height: auto;
+}
