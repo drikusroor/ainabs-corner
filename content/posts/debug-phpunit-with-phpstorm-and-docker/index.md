@@ -65,6 +65,8 @@ My Docker containers are on the `coolboi_shared_network` so we need to configure
 
 Go to `File > Settings > PHP > Test Frameworks`
 
+![](screenshot.png)
+
 I have one Test Framework configured already and assume you have already as well.
 
 On the far right of the `Docker container: [...:...] 📂` row, click the folder icon button.
