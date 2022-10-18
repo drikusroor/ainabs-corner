@@ -1,5 +1,8 @@
-<form action="{{ "search" | absURL }}">
-  <input class="ph2 pv2 w-100" id="search-query" placeholder="Press Ctrl/Cmd + K to search" name="s"/>
+<form action="{{ " search" | absURL }}">
+  <label for="s" class="visually-hidden">Search</label>
+  <input aria-label="Search website" class="ph2 pv2 w-100" id="search-query" placeholder="Press Ctrl/Cmd + K to search"
+    name="s" />
+  <button class="visually-hidden" type="submit">Submit searchF</button>
 </form>
 
-<script async src="{{ "js/header.js" | absURL }}"></script>
+<script async src="{{ " js/header.js" | absURL }}"></script>
