@@ -1,6 +1,6 @@
 ---
 title: "Format code on save using ESLint and VS Code"
-date: "2022-08-31"
+date: "2022-11-16"
 categories: 
   - "notebook"
 tags: 
