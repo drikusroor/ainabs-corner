@@ -6,6 +6,7 @@ categories:
 tags: 
   - "eslint"
   - "vscode"
+  - "prettier"
 ---
 
 I have always had problems when combining [Prettier](https://prettier.io/) and [ESLint](https://eslint.org/) the same project in VS Code. Prettier would not respect my ESLint rules or vice versa. Sometimes I could mitigate the problems by using the `eslint-config-prettier` package in my ESLint configuration.
