@@ -2,6 +2,8 @@ name: CI
 
 env:
   HUGO_ENV: production
+  NOTION_INTEGRATION_KEY: ${{ secrets.NOTION_INTEGRATION_KEY }}
+  NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
 
 on:
   push:
