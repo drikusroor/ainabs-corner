@@ -29,15 +29,14 @@ async function main() {
     const path = "../content/posts";
     const filename = `${path}/${kebabTitle}/index.md`;
 
-    console.log(post.properties);
-
-    const tags = post.properties.Tags.multi_select.map((tag) => tag.name);
+    const tags = post.properties.Tags.multi_select.map((tag) => `  - "${tag.name}"`).join("\n");
     const date = post.created_time;
 
     const frontmatter = `---
 title: ${title}
 date: ${date}
-tags: ${tags}
+tags: 
+${tags}
 ---`;
 
     const content = `${frontmatter}
