@@ -8,10 +8,18 @@ on:
     branches:
       - main  # Set a branch to deploy
   pull_request:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 */6 * * *'
 
 jobs:
   deploy:
     runs-on: ubuntu-20.04
+
+    strategy:
+      matrix:
+        node-version: [18.x]
+
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
     steps:
@@ -19,6 +27,20 @@ jobs:
         with:
           submodules: true  # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+      - name: Install dependencies
+        run: |
+          cd notion
+          npm ci
+      - name: Generate static site
+        run: |
+          cd notion
+          node index.js
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
