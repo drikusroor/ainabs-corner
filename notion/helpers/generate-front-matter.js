@@ -23,7 +23,7 @@ ${tags}`
   const postId = post.id;
   const postIdMatter = `postId: ${postId}`;
   const url = post.url;
-  const urlMatter = `url: ${url}`;
+  const _urlMatter = `url: ${url}`;
   const source = "Notion";
   const sourceMatter = `source: ${source}`;
 
@@ -32,7 +32,6 @@ ${titleMatter}
 ${dateMatter}
 ${tagMatter}
 ${postIdMatter}
-${urlMatter}
 ${sourceMatter}
 ${featuredImageMatter}
 ---`;
