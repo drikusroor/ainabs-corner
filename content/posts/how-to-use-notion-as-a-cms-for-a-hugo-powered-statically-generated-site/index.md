@@ -1,10 +1,13 @@
 ---
 title: How to use Notion as a CMS for a Hugo powered statically generated site
 date: 2022-11-19T11:38:00.000Z
-tags: 
+tags:
   - "notion"
   - "hugo"
   - "cms"
+postId: 96485f89-65c5-4089-9378-39c014db60be
+url: https://www.notion.so/How-to-use-Notion-as-a-CMS-for-a-Hugo-powered-statically-generated-site-96485f8965c54089937839c014db60be
+source: Notion
 ---
 
 
@@ -41,13 +44,13 @@ Unfortunately, the post does not describe where to get the Database ID, but I’
 First, create a post that will contain your database. I called my post _Ainab’s Journal_, because that’s what it is.
 
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/685e60a5-65e7-4679-a5b7-688f47629311/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221120%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221120T153158Z&X-Amz-Expires=3600&X-Amz-Signature=afee0981ea947c95db76746d5a14d128867e1be612ca335b0b5c603023367a7e&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/685e60a5-65e7-4679-a5b7-688f47629311/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221120%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221120T154239Z&X-Amz-Expires=3600&X-Amz-Signature=7af4571e9a2b3304ebef68b997e6c3ca4ffe6034719022cf4c8fb22d322e251e&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
 Then, in the newly created page create an inline database view:
 
 
-![Add a Database - Inline. A Database - Full page is also possible.](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f9f40a60-62c9-42e1-84ef-98c46c69f178/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221120%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221120T153158Z&X-Amz-Expires=3600&X-Amz-Signature=f01ace3c6dee1cbfc480badcdc9a06d127678409f613c3e6b1509bd4029adb4d&X-Amz-SignedHeaders=host&x-id=GetObject)
+![Add a Database - Inline. A Database - Full page is also possible.](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f9f40a60-62c9-42e1-84ef-98c46c69f178/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221120%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221120T154239Z&X-Amz-Expires=3600&X-Amz-Signature=5459c98245c01d92b49fa5f0e31b2dc7ad7652fa515d9413db3b2441b64027c1&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
 ## 2. Copy Database ID
@@ -59,7 +62,7 @@ I could not find the instructions for getting the Database ID in the aforementio
 Click the three-dotted edit button of the database view and click _Copy link to view_. 
 
 
-![Copy link to view](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/3194fd34-8df8-4cc6-bc4d-9dad243c5591/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221120%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221120T153158Z&X-Amz-Expires=3600&X-Amz-Signature=e95e75ed5bb646a0b57afa6287e0fde09645640eabb4ece5474da5aa58f380bf&X-Amz-SignedHeaders=host&x-id=GetObject)
+![Copy link to view](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/3194fd34-8df8-4cc6-bc4d-9dad243c5591/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221120%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221120T154239Z&X-Amz-Expires=3600&X-Amz-Signature=4554766aa8cfb78392fc05d2d8d85640deff16c8a943f0cf0b3168dadd86be86&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
 Paste the copied link to an editor. It should have the following format:
@@ -88,25 +91,25 @@ A Notion Integration allows other applications to read (or modify) data from a w
 First, go to Settings & members → My connections → Develop or manage integrations:
 
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/4658e415-1f42-47cd-bfb3-4ce739ea016c/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221120%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221120T153158Z&X-Amz-Expires=3600&X-Amz-Signature=5ee793f30a2a1fef961c9987fc04e0293468a54a22d8366917e28dec7c4a8456&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/4658e415-1f42-47cd-bfb3-4ce739ea016c/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221120%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221120T154239Z&X-Amz-Expires=3600&X-Amz-Signature=5364dd06618d3d4c765370d3cf38efbb060b8a659ead33da35db9d4817771c85&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
 Click _Create a new integration_:
 
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/9a3d5acc-d2b5-4b02-afb2-dc202c04d09f/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221120%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221120T153158Z&X-Amz-Expires=3600&X-Amz-Signature=b0932ce62b961b0efaf7bfe1e1e034b53ca3f95c386f321af1e5b0c356dc7084&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/9a3d5acc-d2b5-4b02-afb2-dc202c04d09f/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221120%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221120T154239Z&X-Amz-Expires=3600&X-Amz-Signature=6274093be055a4de14ee08cf6042f1d7a264ba68ae64960e466602c5a4d19a4c&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
 Give it a name and logo to your liking. Make sure you uncheck Update content, Insert content, Read comments, and Insert comments (see image). Also, we need no user information. Hit submit.
 
 
-![Uncheck modifying content capabilities & comments](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/3536bcdd-0eb7-422d-acab-6d58d38e5d25/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221120%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221120T153158Z&X-Amz-Expires=3600&X-Amz-Signature=b2a17f399178730f4f9dae56c62ff7e47cf6d85d50742c3b4179a9e3661d60ee&X-Amz-SignedHeaders=host&x-id=GetObject)
+![Uncheck modifying content capabilities & comments](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/3536bcdd-0eb7-422d-acab-6d58d38e5d25/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221120%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221120T154239Z&X-Amz-Expires=3600&X-Amz-Signature=afb77665cabcb84467de138cf556e127be9c2f410f997b4a61072f76eb55af6b&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
 After submitting the form, Notion will show you a next screen that allows you to copy the secret. Click _Show → Copy_ (see screenshot below). Store the secret somewhere safe.
 
 
-![Copy the secret and store it somewhere safe](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/38191a10-cce6-4fb0-ae5f-e66337f9cde5/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221120%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221120T153158Z&X-Amz-Expires=3600&X-Amz-Signature=5772268168bea4075639e5eb4824d1debd713ed18ef7df895efa0898ffc40b9e&X-Amz-SignedHeaders=host&x-id=GetObject)
+![Copy the secret and store it somewhere safe](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/38191a10-cce6-4fb0-ae5f-e66337f9cde5/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221120%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221120T154239Z&X-Amz-Expires=3600&X-Amz-Signature=afd144c2bab627e86a847d98b67a57dc2257de4d9a41dbf9da6aabec9a2f567b&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
 ## 3. Connect integration
@@ -170,7 +173,7 @@ Apparently, I need to make sure that `Make sure the relevant pages and databases
 Copying the link to the **view** is done in the **view settings**, but **connecting the integration** to the **database** is done in the **database settings**. Initially I couldn’t find those settings, but eventually I found them in the top-right of the window:
 
 
-![Connect the database to the integration](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/b8f23070-219a-454d-9bb4-393928ecbc59/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221120%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221120T153158Z&X-Amz-Expires=3600&X-Amz-Signature=ce34d1d20d70120e7073bbe8e19eb719324456c335cb8384be67c8a377654d8a&X-Amz-SignedHeaders=host&x-id=GetObject)
+![Connect the database to the integration](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/b8f23070-219a-454d-9bb4-393928ecbc59/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221120%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221120T154239Z&X-Amz-Expires=3600&X-Amz-Signature=261ecd4dd8c8e2ab3071242a43cb70c6e38ed7b3969737e01910946a2760d4bb&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
 When I now execute the same HTTP request I get a successful response with information about my database:

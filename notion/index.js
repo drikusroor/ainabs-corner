@@ -2,6 +2,7 @@ const fs = require("fs");
 const { NotionToMarkdown } = require("notion-to-md");
 const { Client } = require("@notionhq/client");
 const fetchNotionPosts = require("./api/fetch-db-posts");
+const generateFrontMatter = require("./helpers/generate-front-matter");
 require("dotenv").config();
 
 async function main() {
@@ -29,15 +30,7 @@ async function main() {
     const path = "../content/posts";
     const filename = `${path}/${kebabTitle}/index.md`;
 
-    const tags = post.properties.Tags.multi_select.map((tag) => `  - "${tag.name}"`).join("\n");
-    const date = post.created_time;
-
-    const frontmatter = `---
-title: ${title}
-date: ${date}
-tags: 
-${tags}
----`;
+    const frontmatter = generateFrontMatter(post);
 
     const content = `${frontmatter}
 
