@@ -22,44 +22,46 @@ async function main() {
 
   const posts = await fetchNotionPosts(process.env.NOTION_DATABASE_ID);
 
-  posts.results.forEach(async (post) => {
-    const rawMdBlocks = await n2m.pageToMarkdown(post.id);
-    const { mdBlocks, images } = await fetchBlockImages(rawMdBlocks);
+  posts.results
+    .filter((post) => post.properties.Status?.status?.name === "Published")
+    .forEach(async (post) => {
+      const rawMdBlocks = await n2m.pageToMarkdown(post.id);
+      const { mdBlocks, images } = await fetchBlockImages(rawMdBlocks);
 
-    const mdString = n2m.toMarkdownString(mdBlocks);
+      const mdString = n2m.toMarkdownString(mdBlocks);
 
-    const title = post.properties.Name.title[0].plain_text;
-    const kebabTitle = title.replace(/\s+/g, "-").toLowerCase();
-    const path = "../content/posts";
-    const filename = `${path}/${kebabTitle}/index.md`;
+      const title = post.properties.Name.title[0].plain_text;
+      const kebabTitle = title.replace(/\s+/g, "-").toLowerCase();
+      const path = "../content/posts";
+      const filename = `${path}/${kebabTitle}/index.md`;
 
-    const frontmatter = generateFrontMatter(post);
+      const frontmatter = generateFrontMatter(post);
 
-    const content = `${frontmatter}
+      const content = `${frontmatter}
 
 ${mdString}`;
 
-    fs.mkdirSync(`${path}/${kebabTitle}`, { recursive: true });
-    fs.writeFile(filename, content, (err) => {
-      if (err) {
-        console.log(err);
-      }
-    });
-
-    images.forEach((image) => {
-      const imageDir = `${path}/${kebabTitle}/images`;
-      fs.mkdirSync(imageDir, { recursive: true });
-      fs.writeFile(
-        `${imageDir}/${image.uuid}-${image.imageName}`,
-        image.imageBuffer,
-        (err) => {
-          if (err) {
-            console.log(err);
-          }
+      fs.mkdirSync(`${path}/${kebabTitle}`, { recursive: true });
+      fs.writeFile(filename, content, (err) => {
+        if (err) {
+          console.log(err);
         }
-      );
+      });
+
+      images.forEach((image) => {
+        const imageDir = `${path}/${kebabTitle}/images`;
+        fs.mkdirSync(imageDir, { recursive: true });
+        fs.writeFile(
+          `${imageDir}/${image.uuid}-${image.imageName}`,
+          image.imageBuffer,
+          (err) => {
+            if (err) {
+              console.log(err);
+            }
+          }
+        );
+      });
     });
-  });
 }
 
 main();
