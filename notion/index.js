@@ -2,6 +2,7 @@ const fs = require("fs");
 const { NotionToMarkdown } = require("notion-to-md");
 const { Client } = require("@notionhq/client");
 const fetchNotionPosts = require("./api/fetch-db-posts");
+const fetchBlockImages = require("./helpers/fetch-images");
 const generateFrontMatter = require("./helpers/generate-front-matter");
 require("dotenv").config();
 
@@ -22,7 +23,9 @@ async function main() {
   const posts = await fetchNotionPosts(process.env.NOTION_DATABASE_ID);
 
   posts.results.forEach(async (post) => {
-    const mdBlocks = await n2m.pageToMarkdown(post.id);
+    const rawMdBlocks = await n2m.pageToMarkdown(post.id);
+    const { mdBlocks, images } = await fetchBlockImages(rawMdBlocks);
+
     const mdString = n2m.toMarkdownString(mdBlocks);
 
     const title = post.properties.Name.title[0].plain_text;
@@ -38,7 +41,23 @@ ${mdString}`;
 
     fs.mkdirSync(`${path}/${kebabTitle}`, { recursive: true });
     fs.writeFile(filename, content, (err) => {
-      console.log(err);
+      if (err) {
+        console.log(err);
+      }
+    });
+
+    images.forEach((image) => {
+      const imageDir = `${path}/${kebabTitle}/images`;
+      fs.mkdirSync(imageDir, { recursive: true });
+      fs.writeFile(
+        `${imageDir}/${image.uuid}-${image.imageName}`,
+        image.imageBuffer,
+        (err) => {
+          if (err) {
+            console.log(err);
+          }
+        }
+      );
     });
   });
 }
