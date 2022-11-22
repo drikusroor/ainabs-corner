@@ -1,4 +1,4 @@
-const { retryFetch } = require("./retry-fetch");
+const retryFetch = require("./retry-fetch");
 
 async function fetchImages(mdBlocks) {
   const imageBlocks = mdBlocks.filter((block) => block.type === "image");

@@ -2,7 +2,7 @@ const fetch = require("node-fetch");
 
 const delay = (ms) => new Promise((resolve) => setTimeout(() => resolve(), ms));
 
-export const retryFetch = (
+const retryFetch = (
   url,
   fetchOptions = {},
   retries = 3,
@@ -28,3 +28,5 @@ export const retryFetch = (
     wrapper(retries);
   });
 };
+
+module.exports = retryFetch;
