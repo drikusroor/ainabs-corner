@@ -20,6 +20,14 @@ function generateFrontMatter(post) {
 ${tags}`
     : "";
 
+  const categories = post.properties.Categories.multi_select
+    .map((category) => `  - "${category.name}"`)
+    .join("\n");
+  const categoryMatter = categories
+    ? `categories:
+${categories}`
+    : "";
+
   const postId = post.id;
   const postIdMatter = `postId: ${postId}`;
   const url = post.url;
@@ -30,6 +38,7 @@ ${tags}`
   const frontmatter = `---
 ${titleMatter}
 ${dateMatter}
+${categoryMatter}
 ${tagMatter}
 ${postIdMatter}
 ${sourceMatter}
