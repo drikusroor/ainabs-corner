@@ -1,4 +1,4 @@
-const fetch = require("node-fetch");
+const { retryFetch } = require("./retry-fetch");
 
 async function fetchImages(mdBlocks) {
   const imageBlocks = mdBlocks.filter((block) => block.type === "image");
@@ -17,7 +17,7 @@ async function fetchImages(mdBlocks) {
       const imageName = url.split("/").pop().split("?")[0];
 
       // fetch image file from url
-      const image = await fetch(url);
+      const image = await retryFetch(url);
 
       // create buffer from image file
       const buffer = await image.buffer();
