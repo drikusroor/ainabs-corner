@@ -12,7 +12,7 @@ function generateFrontMatter(post) {
     : null;
   const featuredImageMatter = `featured_image: ${featuredImage}`;
 
-  const tags = post.properties.Tags.multi_select
+  const tags = post.properties.Tags?.multi_select
     .map((tag) => `  - "${tag.name}"`)
     .join("\n");
   const tagMatter = tags
@@ -20,7 +20,7 @@ function generateFrontMatter(post) {
 ${tags}`
     : "";
 
-  const categories = post.properties.Categories.multi_select
+  const categories = post.properties.Category?.multi_select
     .map((category) => `  - "${category.name}"`)
     .join("\n");
   const categoryMatter = categories
