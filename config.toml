@@ -5,3 +5,4 @@ theme = 'ananke'
   home = ["HTML", "RSS", "JSON"]
 [Params]
   custom_css = ["css/main.css"]
+  recent_posts_number = 5
