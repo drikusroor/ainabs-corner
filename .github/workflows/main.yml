@@ -5,7 +5,6 @@ env:
   NOTION_INTEGRATION_KEY: ${{ secrets.NOTION_INTEGRATION_KEY }}
   NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
   pages: write
@@ -71,24 +70,14 @@ jobs:
     steps:
       - name: Download build artifact
         uses: actions/download-artifact@v3
-        with:
-          name: build
       - name: Deploy static site using FTP
-        # You may pin to the exact commit or the version.
-        # uses: sebastianpopp/ftp-action@eb75c5cb29d23ee4a729720a27dfb66403cb0f6d
         uses: sebastianpopp/ftp-action@v2.0.0
         with:
-          # FTP host
           host: ${{ secrets.FtpHost }}
-          # FTP user
           user: ${{ secrets.FtpUser }}
-          # FTP password
           password: ${{ secrets.FtpPassword }}
-          # Force SSL encryption
           forceSsl: true
-          # Local directory
           localDir: ./public
-          # Remote directory
           remoteDir: ${{ secrets.FtpRemoteDir }}
 
   deploy-gh-pages:
