@@ -48,7 +48,6 @@ jobs:
         with:
           hugo-version: '0.91.2'
           extended: true
-
       - name: Build Hugo static site
         run: hugo --config config.toml,config.production.toml -D --minify
 
@@ -77,7 +76,7 @@ jobs:
           user: ${{ secrets.FtpUser }}
           password: ${{ secrets.FtpPassword }}
           forceSsl: true
-          localDir: ./public
+          localDir: ./build
           remoteDir: ${{ secrets.FtpRemoteDir }}
 
   deploy-gh-pages:
