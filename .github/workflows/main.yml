@@ -63,6 +63,7 @@ jobs:
           name: build
           path: ./public
   deploy-ftp:
+    if: ${{ false }}  # disable for now
     runs-on: ubuntu-latest
     timeout-minutes: 20
     needs: build
