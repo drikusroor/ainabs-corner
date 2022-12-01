@@ -24,13 +24,16 @@ async function main() {
 
   posts.results
     .filter((post) => post.properties.Status?.status?.name === "Published")
-    .forEach(async (post) => {
+    .forEach(async (post, i) => {
       const rawMdBlocks = await n2m.pageToMarkdown(post.id);
       const { mdBlocks, images } = await fetchBlockImages(rawMdBlocks);
 
       const mdString = n2m.toMarkdownString(mdBlocks);
 
       const title = post.properties.Name.title[0].plain_text;
+
+      console.log(`Fetching post ${i + 1}: ${title}`)
+
       const kebabTitle = title.replace(/\s+/g, "-").toLowerCase();
       const path = "../content/posts";
       const filename = `${path}/${kebabTitle}/index.md`;
