@@ -30,7 +30,7 @@ async function main() {
 
       const mdString = n2m.toMarkdownString(mdBlocks);
 
-      const title = post.properties.Name.title[0].plain_text;
+      const title = post.properties.Name.title.map(t => t.plain_text).join('');
 
       console.log(`Fetching post ${i + 1}: ${title}`)
 
