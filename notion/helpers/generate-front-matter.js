@@ -1,5 +1,5 @@
 function generateFrontMatter(post) {
-  const title = post.properties.Name.title[0].plain_text;
+  const title = post.properties.Name.title.map(t => t.plain_text).join('');
   const titleMatter = `title: ${title}`;
 
   const date = post.created_time;
