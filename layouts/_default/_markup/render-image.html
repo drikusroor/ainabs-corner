@@ -6,12 +6,20 @@
 {{- end -}}
 {{- with $img -}}
 
-<img
-  alt="{{ $.Text }}"
-  src="{{ $.Destination | safeURL }}"
-  width={{ $img.Width }}
-  height={{ $img.Height }}
-  loading="lazy"
-/>
+{{- $imageXS := $img.Resize "320x webp q75" -}}
+{{- $imageSM := $img.Resize "480x webp q75" -}}
+{{- $imageMD := $img.Resize "768x webp q75" -}}
+{{- $imageLG := $img.Resize "920x webp q75" -}}
+{{- $imageXL := $img.Resize "1280x webp q75" -}}
+
+<picture>
+  <source srcset="{{ $imageXS.Permalink }}" media="(max-width: 320px)" type="image/webp">
+  <source srcset="{{ $imageSM.Permalink }}" media="(max-width: 480px)" type="image/webp">
+  <source srcset="{{ $imageMD.Permalink }}" media="(max-width: 768px)" type="image/webp">
+  <source srcset="{{ $imageLG.Permalink }}" media="(max-width: 920px)" type="image/webp">
+  <source srcset="{{ $imageXL.Permalink }}" media="(max-width: 1280px)" type="image/webp">
+  <source srcset="{{ $img.Permalink }}" type="image/webp">
+  <img alt="{{ $.Text }}" src="{{ .Name | safeURL }}" width={{ .Width }} height={{ .Height }} loading="lazy" />
+</picture>
 
 {{- end -}}
