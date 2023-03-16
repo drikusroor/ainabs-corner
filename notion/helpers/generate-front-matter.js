@@ -5,11 +5,16 @@ function generateFrontMatter(post) {
   const date = post.created_time;
   const dateMatter = `date: ${date}`;
 
-  const featuredImage = post.cover
-    ? post.cover.external.url
-      ? post.cover.external.url
-      : post.cover.url
-    : null;
+  let featuredImage = null;
+
+  if (post.cover) {
+    if (post.cover.external) {
+      featuredImage = post.cover.external.url;
+    } else {
+      featuredImage = post.cover.url;
+    }
+  }
+  
   const featuredImageMatter = `featured_image: ${featuredImage}`;
 
   const tags = post.properties.Tags?.multi_select
