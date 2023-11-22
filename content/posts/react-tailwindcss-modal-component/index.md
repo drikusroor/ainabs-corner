@@ -1,6 +1,6 @@
 ---
 title: "React modal component styled with TailwindCSS in TypeScript"
-date: "2021-10-18"
+date: "2023-11-22"
 categories: 
   - "notebook"
 tags: 
