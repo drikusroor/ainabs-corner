@@ -169,8 +169,8 @@ export default Modal
 
 ## Modal component unit tests:
 
-```tsx
-import { fireEvent, render, screen, waitFor } from 'from '@testing-library/react'
+```ts
+import { fireEvent, render, screen, waitFor } from '@testing-library/react'
 import Modal from './Modal'
 
 describe('Modal', () => {
