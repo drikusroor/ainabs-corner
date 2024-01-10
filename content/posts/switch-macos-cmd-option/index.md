@@ -1,5 +1,5 @@
 ---
-title: "How to switch the Command (⌘) and the Option (⌥) keys on macOS
+title: "How to switch the Command (⌘) and the Option (⌥) keys on macOS"
 date: "2024-01-10"
 categories: 
   # tips-tricks | genuine-post | guide | guides | notebook | problems-solutions | tips-tricks
